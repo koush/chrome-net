@@ -1,5 +1,5 @@
 {
-  "name": "chrome-net",
+  "name": "@koush/chrome-net",
   "description": "Use the Node `net` API in Chrome Apps",
   "version": "3.3.3",
   "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",

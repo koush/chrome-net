@@ -41,7 +41,7 @@ function onAccept (info) {
   if (info.socketId in servers) {
     servers[info.socketId]._onAccept(info.clientSocketId)
   } else {
-    console.error('Unknown server socket id: ' + info.socketId)
+    // console.error('Unknown server socket id: ' + info.socketId)
   }
 }
 
@@ -49,7 +49,7 @@ function onAcceptError (info) {
   if (info.socketId in servers) {
     servers[info.socketId]._onAcceptError(info.resultCode)
   } else {
-    console.error('Unknown server socket id: ' + info.socketId)
+    // console.error('Unknown server socket id: ' + info.socketId)
   }
 }
 
@@ -57,7 +57,7 @@ function onReceive (info) {
   if (info.socketId in sockets) {
     sockets[info.socketId]._onReceive(info.data)
   } else {
-    console.error('Unknown socket id: ' + info.socketId)
+    // console.error('Unknown socket id: ' + info.socketId)
   }
 }
 
@@ -66,7 +66,7 @@ function onReceiveError (info) {
     sockets[info.socketId]._onReceiveError(info.resultCode)
   } else {
     if (info.resultCode === -100) return // net::ERR_CONNECTION_CLOSED
-    console.error('Unknown socket id: ' + info.socketId)
+    // console.error('Unknown socket id: ' + info.socketId)
   }
 }
 
